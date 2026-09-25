@@ -1,12 +1,12 @@
 # airline-ai-assistant
 
-A skeleton for an AI customer support assistant for an airline ("FlightAI"), built with the OpenAI Python client and Gradio's `ChatInterface`. The idea: give the LLM a tool (`get_ticket_price`) it can call to look up fares, backed by SQLite, so it answers pricing questions with real data instead of guessing.
+A skeleton for an AI customer support assistant for an airline ("FlightAI"), built with the OpenAI Python client (pointed at a local [Ollama](https://ollama.com) model) and Gradio's `ChatInterface`. The idea: give the LLM a tool (`get_ticket_price`) it can call to look up fares, backed by SQLite, so it answers pricing questions with real data instead of guessing.
 
 ## Requirements
 
 - Python 3.12+
 - [uv](https://docs.astral.sh/uv/) for dependency/environment management
-- An OpenAI API key
+- [Ollama](https://ollama.com) installed and running locally (no OpenAI API key needed — the notebook talks to Ollama's local OpenAI-compatible endpoint)
 
 ## Setup
 
@@ -15,7 +15,7 @@ A skeleton for an AI customer support assistant for an airline ("FlightAI"), bui
    ```
    uv sync
    ```
-3. Copy `.env.example` to `.env` and fill in `OPENAI_API_KEY`.
+3. Make sure Ollama is running locally. The notebook pulls the model it needs (`llama3.2`) on first run via `!ollama pull llama3.2`.
 
 ## Usage
 
