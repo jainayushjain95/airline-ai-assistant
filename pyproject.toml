@@ -1,0 +1,11 @@
+[project]
+name = "airline-ai-assistant"
+version = "0.1.0"
+description = "An AI customer support assistant for an airline, using OpenAI tool-calling and Gradio"
+requires-python = ">=3.12"
+dependencies = [
+    "gradio>=6.28.0",
+    "ipykernel>=7.3.0",
+    "openai>=3.19.2",
+    "python-dotenv>=1.2.3",
+]
